@@ -1,0 +1,9 @@
+若你拿到的是「瘦包」(app 不含 mingw64/cmake)：
+
+1. 另下 AIDOGUI_MVP_Workbench_toolchain.7z
+2. 解压后把 mingw64\、cmake\、sdl2\ 拷进本目录 (toolchain\)
+3. 确认存在：
+     mingw64\bin\gcc.exe
+     cmake\bin\cmake.exe
+     sdl2\bin\SDL2.dll
+4. 再运行上层的 Tools.bat → Detect Env

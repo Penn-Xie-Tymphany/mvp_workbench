@@ -1,0 +1,368 @@
+{
+  "version": 2,
+  "project": "ComplexHMI",
+  "inputs": [
+    {
+      "id": "in1",
+      "kind": "sensor",
+      "label": "DeviceA RSSI",
+      "bind": {
+        "type": "field",
+        "name": "rssi"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "out1",
+      "kind": "widget",
+      "label": "out1",
+      "bind": {
+        "type": "widget",
+        "screen": "devicedetail",
+        "widget": "line4",
+        "field": "rssi",
+        "prefix": "RSSI:"
+      }
+    }
+  ],
+  "flows": [
+    {
+      "from": "about",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "alerts",
+      "on": "A0",
+      "to": "confirm",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "alerts",
+      "on": "A1",
+      "to": "confirm",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "alerts",
+      "on": "A2",
+      "to": "confirm",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "alerts",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "bluetooth",
+      "on": "BACK",
+      "to": "settings",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "confirm",
+      "on": "CANCEL",
+      "to": "alerts",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "confirm",
+      "on": "OK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "dashboard",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "devicedetail",
+      "on": "BACK",
+      "to": "devices",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "devices",
+      "on": "DEVICEA",
+      "to": "devicedetail",
+      "policy": "DEL",
+      "src": "aidogui",
+      "param": "device=A",
+      "widget": "btn_devicea"
+    },
+    {
+      "from": "devices",
+      "on": "DEVICEB",
+      "to": "devicedetail",
+      "policy": "DEL",
+      "src": "aidogui",
+      "param": "device=B",
+      "widget": "btn_deviceb"
+    },
+    {
+      "from": "devices",
+      "on": "DEVICEC",
+      "to": "devicedetail",
+      "policy": "DEL",
+      "src": "aidogui",
+      "param": "device=C"
+    },
+    {
+      "from": "devices",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "display",
+      "on": "BACK",
+      "to": "settings",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "DASHBOARD",
+      "to": "dashboard",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "DEVICES",
+      "to": "devices",
+      "policy": "HIDE",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "SETTINGS",
+      "to": "settings",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "WIZARD",
+      "to": "wizard1",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "ALERTS",
+      "to": "alerts",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "LOGS",
+      "to": "logs",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "home",
+      "on": "ABOUT",
+      "to": "about",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "logs",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "settings",
+      "on": "WIFI",
+      "to": "wifi",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "settings",
+      "on": "BT",
+      "to": "bluetooth",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "settings",
+      "on": "DISP",
+      "to": "display",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "settings",
+      "on": "SOUND",
+      "to": "sound",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "settings",
+      "on": "BACK",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "sound",
+      "on": "BACK",
+      "to": "settings",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wifi",
+      "on": "BACK",
+      "to": "settings",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard1",
+      "on": "PREV",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard1",
+      "on": "NEXT",
+      "to": "wizard2",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard2",
+      "on": "PREV",
+      "to": "wizard1",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard2",
+      "on": "NEXT",
+      "to": "wizard3",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard3",
+      "on": "PREV",
+      "to": "wizard2",
+      "policy": "DEL",
+      "src": "aidogui"
+    },
+    {
+      "from": "wizard3",
+      "on": "NEXT",
+      "to": "home",
+      "policy": "DEL",
+      "src": "aidogui"
+    }
+  ],
+  "fields": [
+    {
+      "name": "device",
+      "ctype": "string",
+      "init": ""
+    },
+    {
+      "name": "rssi",
+      "ctype": "string",
+      "init": "",
+      "keyed": "device"
+    }
+  ],
+  "layout": {
+    "page:HOME": [
+      -60,
+      429
+    ],
+    "page:DASHBOARD": [
+      251,
+      445
+    ],
+    "page:DEVICES": [
+      501,
+      460
+    ],
+    "page:DEVICEDETAIL": [
+      674,
+      388
+    ],
+    "page:SETTINGS": [
+      -221,
+      598
+    ],
+    "page:WIFI": [
+      -285,
+      828
+    ],
+    "page:BLUETOOTH": [
+      480,
+      662
+    ],
+    "page:DISPLAY": [
+      855,
+      611
+    ],
+    "page:SOUND": [
+      -205,
+      713
+    ],
+    "page:WIZARD1": [
+      190,
+      915
+    ],
+    "page:WIZARD2": [
+      480,
+      744
+    ],
+    "page:WIZARD3": [
+      844,
+      721
+    ],
+    "page:ALERTS": [
+      -48,
+      920
+    ],
+    "page:CONFIRM": [
+      333,
+      970
+    ],
+    "page:LOGS": [
+      573,
+      928
+    ],
+    "page:ABOUT": [
+      805,
+      894
+    ]
+  },
+  "layout_v": 2
+}

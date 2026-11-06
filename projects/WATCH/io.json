@@ -1,0 +1,254 @@
+{
+  "version": 2,
+  "project": "WATCH",
+  "fields": [
+    {
+      "name": "步数",
+      "ctype": "int",
+      "init": 0
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    {
+      "id": "out1",
+      "kind": "widget",
+      "label": "out1",
+      "bind": {
+        "type": "widget",
+        "screen": "watch_analog",
+        "widget": "step_label",
+        "field": "步数"
+      }
+    },
+    {
+      "id": "out2",
+      "kind": "widget",
+      "label": "out2",
+      "bind": {
+        "type": "widget",
+        "screen": "watch_digital",
+        "widget": "step_label",
+        "field": "步数"
+      }
+    }
+  ],
+  "flows": [
+    {
+      "from": "blood_oxy",
+      "on": "BLOOD_OXY",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root",
+      "param": ""
+    },
+    {
+      "from": "blood_oxy",
+      "on": "BUTTON_DOWN5",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down5"
+    },
+    {
+      "from": "blood_oxy",
+      "on": "BUTTON_ROUND",
+      "to": "measuing",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_round"
+    },
+    {
+      "from": "blood_pressure",
+      "on": "BLOOD_PRESSURE",
+      "to": "blood_oxy",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "blood_pressure",
+      "on": "BUTTON_DOWN7",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down7"
+    },
+    {
+      "from": "blood_pressure",
+      "on": "BUTTON_ROUND2",
+      "to": "measuing",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_round2"
+    },
+    {
+      "from": "call",
+      "on": "BUTTON_DOWN2",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down2"
+    },
+    {
+      "from": "call",
+      "on": "BUTTON_TOP2",
+      "to": "watch_analog",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_top2"
+    },
+    {
+      "from": "ecg",
+      "on": "ECG",
+      "to": "blood_oxy",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "ecg",
+      "on": "BUTTON_DOWN6",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down6"
+    },
+    {
+      "from": "ecg",
+      "on": "BUTTON_ROUND1",
+      "to": "measuing",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_round1"
+    },
+    {
+      "from": "measuing",
+      "on": "X_BUTTON",
+      "to": "blood_oxy",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "x_button"
+    },
+    {
+      "from": "watch_analog",
+      "on": "WATCH_ANALOG",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "watch_analog",
+      "on": "BUTTON_TOP1",
+      "to": "call",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_top1"
+    },
+    {
+      "from": "watch_analog",
+      "on": "BUTTON_DOWN1",
+      "to": "weather_1",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down1"
+    },
+    {
+      "from": "watch_digital",
+      "on": "WATCH_DIGITAL",
+      "to": "watch_analog",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "watch_digital",
+      "on": "BUTTON_TOP",
+      "to": "call",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_top"
+    },
+    {
+      "from": "watch_digital",
+      "on": "BUTTON_DOWN",
+      "to": "weather_1",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down"
+    },
+    {
+      "from": "weather_1",
+      "on": "WEATHER_1",
+      "to": "weather_2",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "weather_1",
+      "on": "BUTTON_DOWN3",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down3"
+    },
+    {
+      "from": "weather_2",
+      "on": "WEATHER_2",
+      "to": "weather_1",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "root"
+    },
+    {
+      "from": "weather_2",
+      "on": "BUTTON_DOWN4",
+      "to": "watch_digital",
+      "policy": "DEL",
+      "src": "aidogui",
+      "widget": "button_down4"
+    }
+  ],
+  "layout": {
+    "page:WATCH_DIGITAL": [
+      60,
+      170
+    ],
+    "page:WATCH_ANALOG": [
+      270,
+      170
+    ],
+    "page:CALL": [
+      480,
+      170
+    ],
+    "page:WEATHER_1": [
+      690,
+      170
+    ],
+    "page:WEATHER_2": [
+      60,
+      252
+    ],
+    "page:BLOOD_OXY": [
+      270,
+      252
+    ],
+    "page:ECG": [
+      480,
+      252
+    ],
+    "page:BLOOD_PRESSURE": [
+      690,
+      252
+    ],
+    "page:MEASUING": [
+      60,
+      334
+    ]
+  },
+  "layout_v": 2
+}

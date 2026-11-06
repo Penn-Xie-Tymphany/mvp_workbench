@@ -1,0 +1,81 @@
+{
+  "project_hint": "SnakeHandheld",
+  "commands": [
+    {
+      "name": "PAUSE",
+      "enum": "APP_CMD_PAUSE"
+    },
+    {
+      "name": "DIE",
+      "enum": "APP_CMD_DIE"
+    },
+    {
+      "name": "RETRY",
+      "enum": "APP_CMD_RETRY"
+    },
+    {
+      "name": "HOME",
+      "enum": "APP_CMD_HOME"
+    },
+    {
+      "name": "BACK",
+      "enum": "APP_CMD_BACK"
+    },
+    {
+      "name": "START",
+      "enum": "APP_CMD_START"
+    },
+    {
+      "name": "HELP",
+      "enum": "APP_CMD_HELP"
+    },
+    {
+      "name": "RESUME",
+      "enum": "APP_CMD_RESUME"
+    }
+  ],
+  "fields": [
+    {
+      "name": "screen",
+      "c_type": "app_screen_id_t",
+      "kind": "enum"
+    },
+    {
+      "name": "score",
+      "c_type": "int",
+      "kind": "int"
+    },
+    {
+      "name": "paused",
+      "c_type": "bool",
+      "kind": "bool"
+    }
+  ],
+  "screens": [
+    {
+      "name": "MENU",
+      "enum": "APP_SCREEN_MENU"
+    },
+    {
+      "name": "HELP",
+      "enum": "APP_SCREEN_HELP"
+    },
+    {
+      "name": "GAME",
+      "enum": "APP_SCREEN_GAME"
+    },
+    {
+      "name": "PAUSE",
+      "enum": "APP_SCREEN_PAUSE"
+    },
+    {
+      "name": "GAMEOVER",
+      "enum": "APP_SCREEN_GAMEOVER"
+    }
+  ],
+  "sources": {
+    "app_model.h": "D:\\work\\AI_LVGL_TEST\\AIDOGUI_MVP_Workbench\\engine\\ui_import\\SnakeHandheld\\mvp\\app_model.h",
+    "app_cmd.h": "D:\\work\\AI_LVGL_TEST\\AIDOGUI_MVP_Workbench\\engine\\ui_import\\SnakeHandheld\\mvp\\app_cmd.h",
+    "app_model_user.h": "D:\\work\\AI_LVGL_TEST\\AIDOGUI_MVP_Workbench\\engine\\ui_import\\SnakeHandheld\\mvp\\app_model_user.h"
+  }
+}

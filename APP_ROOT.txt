@@ -1,0 +1,3 @@
+AIDOGUI_MVP_Workbench APP_ROOT
+Set AIDOGUI_APP_ROOT to this directory when launching desktop_app.
+engine/ = engine sources; scripts/ + toolchain/ = workbench surface.

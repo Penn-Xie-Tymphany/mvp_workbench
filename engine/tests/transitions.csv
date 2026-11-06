@@ -1,0 +1,21 @@
+from,cmd,to,unload_policy,notes
+MENU,START,GAME,DEL,enter game deletes menu
+GAME,PAUSE,PAUSE,HIDE,pause overlays game
+PAUSE,RESUME,GAME,DEL,resume deletes pause game stays
+GAME,DIE,GAMEOVER,DEL,die deletes game
+GAMEOVER,RETRY,GAME,DEL,retry deletes gameover
+GAME,PAUSE,PAUSE,HIDE,pause again for home path
+PAUSE,HOME,MENU,DEL,home deletes pause and game underlay
+MENU,HELP,HELP,DEL,help deletes menu
+HELP,BACK,MENU,DEL,back deletes help
+MENU,START,GAME,DEL,reenter game
+GAME,DIE,GAMEOVER,DEL,to gameover for home
+GAMEOVER,HOME,MENU,DEL,home deletes gameover
+MENU,HELP,HELP,DEL,setup for illegal start on help
+HELP,START,REJECT,DEL,illegal start on help
+HELP,BACK,MENU,DEL,return after illegal
+MENU,PAUSE,REJECT,DEL,illegal pause on menu
+MENU,START,GAME,DEL,setup for illegal on gameover
+GAME,DIE,GAMEOVER,DEL,setup gameover
+GAMEOVER,PAUSE,REJECT,DEL,illegal pause on gameover
+GAMEOVER,HOME,MENU,DEL,cleanup

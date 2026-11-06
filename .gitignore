@@ -1,0 +1,30 @@
+# ---- build artifacts ----
+engine/build/
+/bin/
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+
+# ---- toolchain & vendored engines (restored via scripts/fetch_lvgl.ps1) ----
+/toolchain/
+engine/vendor/
+/runtime/
+
+# ---- imported UI projects (user data — import via the Workbench first) ----
+engine/ui_import/*/
+!engine/ui_import/.active_project
+
+# ---- per-project junctions pointing into engine/ui_import ----
+projects/*/ui/
+
+# ---- python ----
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- OS / editor ----
+Thumbs.db
+.DS_Store
+*.tmp

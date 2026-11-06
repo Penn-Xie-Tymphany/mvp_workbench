@@ -1,0 +1,5 @@
+# GUI: prefer stdlib tkinter on Windows.
+# On Linux boxes without python3-tk:
+PySide6>=6.6
+# Packaging (Windows build machine):
+# pyinstaller>=6.0

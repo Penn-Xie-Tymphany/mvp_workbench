@@ -1,0 +1,11 @@
+# MVP CMD script — one command per line
+# CMD START
+# CMD HELP
+CMD PAUSE
+CMD DIE
+CMD START
+CMD HELP
+CMD RETRY
+CMD HOME
+CMD RESUME
+
